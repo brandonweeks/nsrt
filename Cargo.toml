@@ -2,8 +2,13 @@
 name = "nsrt"
 version = "0.1.0"
 edition = "2024"
+description = "A Rust driver for the NSRT_mk4 sound level meter"
+repository = "https://github.com/brandonweeks/nsrt"
+license = "Apache-2.0"
 
 [dependencies]
-bytes = "1.10.1"
 serialport = "4.7.1"
 thiserror = "2.0.12"
+
+[lints.clippy]
+style = "warn"
