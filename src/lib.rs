@@ -126,14 +126,15 @@ impl NSRT {
         let ports = serialport::available_ports()?;
 
         for port_info in ports {
-            if let serialport::SerialPortType::UsbPort(usb_info) = &port_info.port_type {
-                if usb_info.vid == VID && usb_info.pid == PID {
-                    let port = serialport::new(&port_info.port_name, 9600)
-                        .timeout(Duration::from_millis(1000))
-                        .open()?;
+            if let serialport::SerialPortType::UsbPort(usb_info) = &port_info.port_type
+                && usb_info.vid == VID
+                && usb_info.pid == PID
+            {
+                let port = serialport::new(&port_info.port_name, 9600)
+                    .timeout(Duration::from_millis(1000))
+                    .open()?;
 
-                    return Ok(Self { port });
-                }
+                return Ok(Self { port });
             }
         }
 
