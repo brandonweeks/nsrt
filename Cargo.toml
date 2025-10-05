@@ -8,7 +8,7 @@ license = "Apache-2.0"
 
 [dependencies]
 serialport = "4.7.3"
-thiserror = "2.0.16"
+thiserror = "2.0.17"
 
 [lints.clippy]
 style = "warn"
