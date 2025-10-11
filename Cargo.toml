@@ -7,7 +7,7 @@ repository = "https://github.com/brandonweeks/nsrt"
 license = "Apache-2.0"
 
 [dependencies]
-serialport = "4.7.3"
+serialport = "4.8.1"
 thiserror = "2.0.17"
 
 [lints.clippy]
